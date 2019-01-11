@@ -208,4 +208,14 @@ defmodule TransformsTest do
   end
 
 
+  test "Success - Store a named func in a variable and then call it" do
+
+    # Create a metric
+    metric = %Transforms.Metric{name: "mem_avg", keys: @list_of_keys1, values: @list_of_values1}
+    transform1 = Transforms.Transform.create("tbd", {"param1", 23})
+#    Transforms.FunctionsAsVariables.create_list()
+#    Logger.debug("new_list_of_keys=#{inspect new_list_of_keys}, new_list_of_values=#{inspect new_list_of_values}")
+  end
+
+
 end

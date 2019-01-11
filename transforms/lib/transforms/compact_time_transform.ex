@@ -5,13 +5,14 @@ defmodule Transforms.CompactTimeTransform do
   ## Constants
 #  @rolling_avg_length_default 10
   @time_period 15*60  # In seconds
+  @time_period_param_name "time_period"
 
   def transform(list_of_keys, list_of_values, params) do
 
     Logger.debug("In CompactTimeTransform, list_of_keys=#{inspect list_of_keys}, list_of_values=#{inspect list_of_values}, params=#{inspect params}")
 
     # Get the params
-    time_period = Map.get(params, "time_period", @time_period)
+    time_period = Map.get(params, @time_period_param_name, @time_period)
     Logger.debug("get_param for time_period matched: #{inspect time_period}")
 
     index = 0

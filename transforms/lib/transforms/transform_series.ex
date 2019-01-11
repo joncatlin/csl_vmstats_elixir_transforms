@@ -1,8 +1,11 @@
 defmodule TransformSeries do
+
+  require Logger
+
   @enforce_keys [:metric, :transforms, :group_id, :connection_id, :machine, :date]
   defstruct metric: nil,
     transforms: nil,
-    group_id: nil, 
+    group_id: nil,
     connection_id: nil,
     machine: nil,
     date: nil
@@ -19,6 +22,18 @@ defmodule TransformSeries do
     machine: String.t(),
     date: Date.t()
   }
+
+  # date_range
+  # machine
+  # transform series [transform, transform, transform, ...]
+
+
+
+
+  def execute() do
+    Logger.debug("In TransformSeries.execute")
+  end
+
 end
 
 
