@@ -7,6 +7,8 @@ defmodule Transforms.FunctionsAsVariables do
     varfunc1 = &func1/1
     IO.puts("Hello jon")
     varfunc1.([1,2,5,8,0])
+
+    jonmap = %{func: &func1/1}
   end
 
 

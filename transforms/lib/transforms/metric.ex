@@ -17,4 +17,14 @@ defmodule Transforms.Metric do
 #          values: Map.t(Integer.t(), Float.t())
 #          values: Map.t(Transforms.Value.t())
         }
+
+
+
+
+  def create(name, keys, values) do
+    metric = %Transforms.Metric{name: name, keys: keys, values: values}
+    {:ok,  metric}
+
+#    {:error,
+  end
 end
